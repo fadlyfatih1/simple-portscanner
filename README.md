@@ -1,28 +1,42 @@
-# Port Scanner
-Port Scanner adalah alat sederhana berbasis Python untuk memindai port yang terbuka pada satu atau beberapa target. Alat ini dirancang untuk membantu Anda memeriksa koneksi jaringan dan mengidentifikasi port yang terbuka.
+# Port Scanner Tool 🔎
 
-## Fitur
-- Mendukung pemindaian beberapa target dalam sekali eksekusi.
-- Menampilkan port yang terbuka dengan output yang terstruktur.
-- Mudah digunakan dengan antarmuka berbasis terminal.
+A simple Python-based port scanner to check open ports on one or more targets.
 
-## Persyaratan
+## Features ✨
+- Scans a single target or multiple targets.
+- Allows you to specify the number of ports to scan.
+- Displays open ports in a clean format.
+
+## How It Works ⚛️
+This tool uses Python's `socket` module to connect to specified ports on the given target(s). If a connection is successful, the port is marked as open.
+
+## Requirements ⭐
 - Python 3.x
-- Tidak memerlukan modul pihak ketiga.
+- Basic understanding of networking
 
-## Cara Penggunaan
-1. Clone repository ini:
+## Usage 🚀
+1. Clone this repository:
    ```bash
    git clone https://github.com/fadlyfatih1/simple-portscanner.git
-   cd port-scanner
+   cd simple-portscanner
+   ```
 
-2. Pastikan Anda sudah menginstal Python 3.x di komputer Anda.
+2. Run the script:
+   ```bash
+   python3 portscanner.py
+   ```
 
-3. Jalankan program: python portscanner.py
+Example input/output:
+```text
+[*] Enter Targets To Scan (split them by ,): 192.168.1.1
+[*] Enter How Many Ports You Want To Scan: 1000
 
-4. Masukkan target yang ingin dipindai, contoh: 
-[*] Enter Targets To Scan (split them by ,): 192.168.1.1,192.168.1.2
-[*] Enter How Many Ports You Want To Scan: 100
+ Starting Scan For 192.168.1.1
+[+] Port Opened 22
+[+] Port Opened 80
+[+] Port Opened 443
+```
 
-## Catatan
-Alat ini hanya untuk tujuan pembelajaran dan diagnosis jaringan yang diizinkan. Gunakan dengan tanggung jawab dan hanya pada jaringan yang Anda miliki atau memiliki izin untuk memindai.
+## Notes 📊
+- Make sure to run this script with proper authorization. Scanning unauthorized networks is illegal and unethical.
+- The script is basic and does not include advanced features like multi-threading or service detection.
